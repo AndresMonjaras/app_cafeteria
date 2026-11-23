@@ -1,0 +1,292 @@
+{
+  "cafeteria": {
+    "name": "Cafetería Universitaria",
+    "currency": "MXN",
+    "acceptingOrders": false,
+    "locationConfigured": true,
+    "location": {
+      "lat": 20.54146,
+      "lng": -100.81192,
+      "label": "Cafetería · Campus II",
+      "address": "TecNM Celaya Campus II, Centro de Convivencia Estudiantil, Av. Antonio García Cubas 1200 esq. Ignacio Borunda, Col. Alfredo Vázquez Bonfil, C.P. 38010, Celaya, Gto.",
+      "approximate": true,
+      "hours": "Lunes a viernes, 7:30–19:00"
+    }
+  },
+  "deliveryCoverage": {
+    "centerLat": 20.54146,
+    "centerLng": -100.81192,
+    "radiusMeters": 350,
+    "approximate": true,
+    "note": "Radio provisional, validar límites reales del Campus II"
+  },
+  "categories": {
+    "tortas": {
+      "name": "Tortas",
+      "sortOrder": 1,
+      "demo": true
+    },
+    "breakfast": {
+      "name": "Desayunos",
+      "sortOrder": 2,
+      "demo": true
+    },
+    "drinks": {
+      "name": "Bebidas",
+      "sortOrder": 3,
+      "demo": true
+    }
+  },
+  "products": {
+    "torta-jamon": {
+      "name": "Torta de jamón",
+      "categoryId": "tortas",
+      "description": "Torta de jamón con queso, jitomate y lechuga en bolillo. Producto de demostración.",
+      "ingredients": [
+        "Bolillo",
+        "Jamón",
+        "Queso",
+        "Jitomate",
+        "Lechuga"
+      ],
+      "priceCents": 4500,
+      "prepMinutes": 6,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "complements": [
+        {
+          "label": "Bebida",
+          "priceCents": 1800,
+          "available": true
+        },
+        {
+          "label": "Papas",
+          "priceCents": 2500,
+          "available": true
+        }
+      ],
+      "imagePath": "menu/torta-jamon.jpg"
+    },
+    "torta-milanesa": {
+      "name": "Torta de milanesa",
+      "categoryId": "tortas",
+      "description": "Torta de milanesa de res con frijoles, aguacate y jitomate en bolillo. Producto de demostración.",
+      "ingredients": [
+        "Bolillo",
+        "Milanesa de res",
+        "Frijoles",
+        "Aguacate",
+        "Jitomate"
+      ],
+      "priceCents": 5900,
+      "prepMinutes": 10,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "complements": [
+        {
+          "label": "Bebida",
+          "priceCents": 1800,
+          "available": true
+        },
+        {
+          "label": "Papas",
+          "priceCents": 2500,
+          "available": true
+        }
+      ],
+      "imagePath": "menu/torta-milanesa.jpg"
+    },
+    "torta-pierna": {
+      "name": "Torta de pierna",
+      "categoryId": "tortas",
+      "description": "Torta de pierna de cerdo adobada con cebolla y jitomate en bolillo. Producto de demostración.",
+      "ingredients": [
+        "Bolillo",
+        "Pierna de cerdo",
+        "Cebolla",
+        "Jitomate"
+      ],
+      "priceCents": 5600,
+      "prepMinutes": 8,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "complements": [
+        {
+          "label": "Bebida",
+          "priceCents": 1800,
+          "available": true
+        },
+        {
+          "label": "Papas",
+          "priceCents": 2500,
+          "available": true
+        }
+      ],
+      "imagePath": "menu/torta-pierna.jpg"
+    },
+    "torta-pollo": {
+      "name": "Torta de pollo",
+      "categoryId": "tortas",
+      "description": "Torta de pollo con lechuga y mayonesa en bolillo. Producto de demostración.",
+      "ingredients": [
+        "Bolillo",
+        "Pollo",
+        "Lechuga",
+        "Mayonesa"
+      ],
+      "priceCents": 5200,
+      "prepMinutes": 8,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "complements": [
+        {
+          "label": "Bebida",
+          "priceCents": 1800,
+          "available": true
+        },
+        {
+          "label": "Papas",
+          "priceCents": 2500,
+          "available": true
+        }
+      ],
+      "imagePath": "menu/torta-pollo.jpg"
+    },
+    "desayuno-dia": {
+      "name": "Desayuno del día",
+      "categoryId": "breakfast",
+      "description": "Desayuno con huevo, pan tostado y fruta de temporada. Producto de demostración.",
+      "ingredients": [
+        "Huevo",
+        "Pan tostado",
+        "Fruta de temporada"
+      ],
+      "priceCents": 6500,
+      "prepMinutes": 12,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "imagePath": "menu/desayuno-dia.jpg"
+    },
+    "chilaquiles": {
+      "name": "Chilaquiles",
+      "categoryId": "breakfast",
+      "description": "Totopos con salsa, crema, queso y cebolla. Producto de demostración.",
+      "ingredients": [
+        "Totopos",
+        "Salsa",
+        "Crema",
+        "Queso",
+        "Cebolla"
+      ],
+      "priceCents": 5800,
+      "prepMinutes": 10,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "variants": [
+        {
+          "label": "Verdes",
+          "priceCents": 5800,
+          "available": true
+        },
+        {
+          "label": "Rojos",
+          "priceCents": 5800,
+          "available": false
+        }
+      ],
+      "imagePath": "menu/chilaquiles.jpg"
+    },
+    "huevos": {
+      "name": "Huevos al gusto",
+      "categoryId": "breakfast",
+      "description": "Huevos con frijoles y tortillas. Producto de demostración.",
+      "ingredients": [
+        "Huevo",
+        "Frijoles",
+        "Tortillas"
+      ],
+      "priceCents": 4900,
+      "prepMinutes": 10,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "imagePath": "menu/huevos.jpg"
+    },
+    "agua": {
+      "name": "Agua",
+      "categoryId": "drinks",
+      "description": "Agua natural fría. Producto de demostración.",
+      "ingredients": [
+        "Agua"
+      ],
+      "priceCents": 1500,
+      "prepMinutes": 1,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "imagePath": "menu/agua.jpg"
+    },
+    "refresco": {
+      "name": "Refresco",
+      "categoryId": "drinks",
+      "description": "Refresco de cola servido frío. Producto de demostración.",
+      "ingredients": [
+        "Agua carbonatada",
+        "Jarabe de cola"
+      ],
+      "priceCents": 2400,
+      "prepMinutes": 1,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "imagePath": "menu/refresco.jpg"
+    },
+    "jugo": {
+      "name": "Jugo",
+      "categoryId": "drinks",
+      "description": "Jugo de naranja. Producto de demostración.",
+      "ingredients": [
+        "Naranja"
+      ],
+      "priceCents": 3000,
+      "prepMinutes": 3,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "imagePath": "menu/jugo.jpg"
+    },
+    "cafe": {
+      "name": "Café",
+      "categoryId": "drinks",
+      "description": "Café americano. Producto de demostración.",
+      "ingredients": [
+        "Café",
+        "Agua"
+      ],
+      "priceCents": 2200,
+      "prepMinutes": 3,
+      "available": true,
+      "archived": false,
+      "demo": true,
+      "variants": [
+        {
+          "label": "Chico",
+          "priceCents": 2200,
+          "available": true
+        },
+        {
+          "label": "Grande",
+          "priceCents": 2900,
+          "available": true
+        }
+      ],
+      "imagePath": "menu/cafe.jpg"
+    }
+  }
+}

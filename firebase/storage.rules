@@ -1,0 +1,53 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isSupportedImage(file) {
+      return file != null
+        && file.contentType.matches('^image/(jpeg|png|webp)$')
+        && file.size <= 2097152;
+    }
+
+    function canManageMenu() {
+      return request.auth != null
+        && (request.auth.token.admin == true || request.auth.token.staff == true);
+    }
+
+    function canEditAvatar(uid) {
+      return request.auth != null
+        && request.auth.uid == uid
+        && request.auth.token.email_verified == true
+        && request.auth.token.avatar_editable == true
+        && request.auth.token.firebase.sign_in_provider == 'password';
+    }
+
+    match /avatars/presets/{fileName} {
+      allow read: if resource != null && resource.contentType == 'image/webp';
+      allow write: if false;
+    }
+
+    match /menu/{productId}/{fileName} {
+      allow read: if resource != null
+        && resource.contentType.matches('^image/(jpeg|png|webp)$');
+      allow write: if canManageMenu()
+        && (request.resource == null || isSupportedImage(request.resource));
+    }
+
+    match /menu/{fileName} {
+      allow read: if resource != null
+        && resource.contentType.matches('^image/(jpeg|png|webp)$');
+      allow write: if canManageMenu()
+        && (request.resource == null || isSupportedImage(request.resource));
+    }
+
+    match /profiles/{uid}/avatar/{fileName} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if canEditAvatar(uid)
+        && (request.resource == null || isSupportedImage(request.resource));
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
